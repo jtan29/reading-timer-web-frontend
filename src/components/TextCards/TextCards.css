@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2&display=swap');
+
+*{
+    font-family: 'Exo 2', Arial, sans-serif;
+}
+.card{
+}
+
+.text-genre{
+    text-align: left;
+}
+
+.text-words{
+    text-align: left;
+}
+
+.text-elapsed{
+    text-align: left;
+}
+
+.card-image-closed{
+    height: 200px;
+    width: auto;
+}
+
+.card-image-open{
+    height: 200px;
+    width: auto;
+}
+
+.card-body{
+
+}

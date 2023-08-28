@@ -1,24 +1,32 @@
-import logo from './logo.svg';
 import './App.css';
+import api from './api/axiosConfig';
+import {useState, useEffect} from 'react';
+import TextCards from './components/TextCards/TextCards';
+import {Routes, Route} from "react-router-dom";
+import React from "react";
 
 function App() {
+  const [texts, setTexts] = useState();
+  const getAllTexts = async () =>{
+    try {
+      const response = await api.get("");
+      console.log(response.data);
+      setTexts(response.data);
+    }
+    catch(err) {
+      console.error(err);
+    }
+  }
+
+  useEffect(() => {
+    getAllTexts();
+  },[])
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div className="App">
+        <Routes>
+          <Route path='/' element={<TextCards texts={texts} />}></Route>
+        </Routes>
+      </div>
   );
 }
 
