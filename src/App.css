@@ -1,8 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2&display=swap');
+
+*{
+  font-family: 'Exo 2', Arial, sans-serif;
+  background-color: white;
+}
+
 .App {
   display: flex;
   flex-direction: column;
-  background-color: beige;
   color: black;
+
   text-align: center;
   margin-top: 10px;
 }

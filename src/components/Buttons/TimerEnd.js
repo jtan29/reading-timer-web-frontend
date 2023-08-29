@@ -1,5 +1,6 @@
 import Button from 'react-bootstrap/Button';
 import api from '../../api/axiosConfig';
+import './Buttons.css'
 import React from 'react';
 
 const TimerEnd = ({text, texts, setTexts}) => {
@@ -23,7 +24,7 @@ const TimerEnd = ({text, texts, setTexts}) => {
 
     return (
 
-        <Button onClick={timerEnd} variant="warning">End Timer</Button>
+        <Button className={"time-button"} onClick={timerEnd} variant="warning">End Timer</Button>
     )
 }
 export default TimerEnd;

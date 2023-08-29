@@ -5,6 +5,7 @@ import TextCards from './components/TextCards/TextCards';
 import Header from "./components/NavBar/NavBar";
 import {Routes, Route} from "react-router-dom";
 import React from "react";
+import AddForm from "./components/AddForm/AddForm";
 
 function App() {
   const [texts, setTexts] = useState();
@@ -26,7 +27,8 @@ function App() {
       <div className="App">
         <Header></Header>
         <Routes>
-          <Route path='/' element={<TextCards texts={texts} setTexts={setTexts} />}></Route>
+          <Route path='/home' element={<TextCards texts={texts} setTexts={setTexts} />}></Route>
+          <Route path='/add' element={<AddForm texts={texts} setTexts={setTexts}></AddForm>}></Route>
         </Routes>
       </div>
   );

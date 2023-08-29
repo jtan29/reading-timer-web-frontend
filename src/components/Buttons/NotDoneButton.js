@@ -1,5 +1,6 @@
 import Button from 'react-bootstrap/Button';
 import api from '../../api/axiosConfig';
+import './Buttons.css'
 import React from 'react';
 
 const NotDoneButton = ({text, texts, setTexts}) => {
@@ -11,7 +12,6 @@ const NotDoneButton = ({text, texts, setTexts}) => {
             const index = texts.indexOf(text);
             const updatedTexts = [...texts];
             updatedTexts[index].complete = false;
-            console.log(updatedTexts);
             setTexts(updatedTexts);
 
         } catch(err) {
@@ -21,7 +21,7 @@ const NotDoneButton = ({text, texts, setTexts}) => {
 
     return (
 
-        <Button onClick={markNotDone} variant="outline-secondary">Mark Not Done</Button>
+        <Button className={"status-button"} onClick={markNotDone} variant="outline-secondary">Mark Not Done</Button>
     )
 }
 export default NotDoneButton;

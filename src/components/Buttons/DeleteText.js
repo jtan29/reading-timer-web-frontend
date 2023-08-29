@@ -1,6 +1,7 @@
 import Button from 'react-bootstrap/Button';
 import api from '../../api/axiosConfig';
 import React from 'react';
+import './Buttons.css'
 
 const DeleteText = ({text, texts, setTexts}) => {
     const textId = text.textId;
@@ -20,7 +21,7 @@ const DeleteText = ({text, texts, setTexts}) => {
 
     return (
 
-        <Button onClick={deleteText} variant="danger">Delete</Button>
+        <Button className={'delete-button'} onClick={deleteText} variant="danger">Delete</Button>
     )
 }
 export default DeleteText;

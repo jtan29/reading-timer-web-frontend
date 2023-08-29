@@ -1,25 +1,27 @@
-@import url('https://fonts.googleapis.com/css2?family=Exo+2&display=swap');
-
-*{
-    font-family: 'Exo 2', Arial, sans-serif;
-}
 .card{
+    margin: 1em;
+    border-radius: 25px;
+    border-style: solid;
+    border-width: 10px;
+    border-color: blue;
+
 }
 
 .card-header{
     text-align: left;
-}
-.text-genre{
-    text-align: left;
+    padding: 10px;
 }
 
-.text-words{
+.card-title{
+    background-color: beige;
+}
+.text-genre, .text-words, .text-elapsed{
+    background-color: beige;
     text-align: left;
+    padding: 5px;
+    margin: 5px;
 }
 
-.text-elapsed{
-    text-align: left;
-}
 
 .card-image-closed{
     height: 200px;
@@ -32,5 +34,11 @@
 }
 
 .card-body{
+    background-color: beige;
+    border: 10px solid saddlebrown;
 
+}
+
+button{
+    padding: 10px;
 }
