@@ -6,6 +6,9 @@
 .card{
 }
 
+.card-header{
+    text-align: left;
+}
 .text-genre{
     text-align: left;
 }

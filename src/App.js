@@ -2,6 +2,7 @@ import './App.css';
 import api from './api/axiosConfig';
 import {useState, useEffect} from 'react';
 import TextCards from './components/TextCards/TextCards';
+import Header from "./components/NavBar/NavBar";
 import {Routes, Route} from "react-router-dom";
 import React from "react";
 
@@ -23,8 +24,9 @@ function App() {
   },[])
   return (
       <div className="App">
+        <Header></Header>
         <Routes>
-          <Route path='/' element={<TextCards texts={texts} />}></Route>
+          <Route path='/' element={<TextCards texts={texts} setTexts={setTexts} />}></Route>
         </Routes>
       </div>
   );
