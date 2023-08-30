@@ -1,10 +1,7 @@
 .card{
-    margin: 1em;
-    border-radius: 25px;
-    border-style: solid;
-    border-width: 10px;
-    border-color: blue;
-
+    margin-top: 2em;
+    margin-left: 1em;
+    margin-right: 2em;
 }
 
 .card-header{
@@ -23,15 +20,11 @@
 }
 
 
-.card-image-closed{
+.card-image-closed, .card-image-open{
     height: 200px;
     width: auto;
 }
 
-.card-image-open{
-    height: 200px;
-    width: auto;
-}
 
 .card-body{
     background-color: beige;

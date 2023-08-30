@@ -1,0 +1,16 @@
+.submit-button, .back-button{
+    margin: 0.25em;
+}
+
+.form-control, .form-select {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0.25em;
+    margin-bottom: 0.25em;
+    max-width: 80%;
+    align-content: center;
+}
+
+.form-label {
+    margin: 0.25em;
+}

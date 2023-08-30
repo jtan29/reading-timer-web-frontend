@@ -1,12 +1,13 @@
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
+import './NavBar.css'
 const Header = () => {
     return (
-        <Navbar className="bg-body-tertiary">
-            <Navbar.Brand>Reading Timer</Navbar.Brand>
+        <Navbar>
+            <Navbar.Brand className={"brand"}>Reading Timer</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
-                <Nav className="me-auto">
+                <Nav>
                     <Nav.Link href="home">Home</Nav.Link>
                     <Nav.Link href="add">Add new text</Nav.Link>
                 </Nav>

@@ -2,6 +2,7 @@ import Button from 'react-bootstrap/Button';
 import api from '../../api/axiosConfig';
 import React, {useState} from 'react';
 import {Form} from "react-bootstrap";
+import './AddForm.css'
 
 const AddForm = ({texts, setTexts}) => {
     const [inputs, setInputs] = useState({});
@@ -54,8 +55,8 @@ const AddForm = ({texts, setTexts}) => {
                 <option value="SELF_HELP">Self-help book</option>
                 <option value="NF_OTHER">Any other non-fiction material</option>
             </Form.Select>
-            <Button type="submit">Submit</Button>
-            <Button href="home">Back</Button>
+            <Button className={"submit-button"} type="submit">Submit</Button>
+            <Button className={"back-button"} href="home">Back</Button>
         </Form>
     )
 }

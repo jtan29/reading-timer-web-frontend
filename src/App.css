@@ -2,14 +2,13 @@
 
 *{
   font-family: 'Exo 2', Arial, sans-serif;
-  background-color: white;
+
 }
 
 .App {
   display: flex;
   flex-direction: column;
   color: black;
-
   text-align: center;
   margin-top: 10px;
 }

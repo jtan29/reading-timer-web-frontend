@@ -1,3 +1,13 @@
-.bg-body-tertiary {
-    text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+.navbar{
+    font-family: 'Montserrat', Arial, sans-serif;
+    background-color: beige;
+    border: 10px solid saddlebrown;
+    margin-top: 0px;
 }
+.navbar-brand {
+    font-family: 'Montserrat', Arial, sans-serif;
+    margin-left: 1em;
+}
+
