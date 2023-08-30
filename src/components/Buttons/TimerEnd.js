@@ -11,10 +11,12 @@ const TimerEnd = ({text, texts, setTexts}) => {
             const response = await api.put("/".concat(textId.toString(),"/","end"));
             const newTime = response.data.elapsedTime;
             const timerRunning = response.data.timerRunning;
+            const newTimeStatement = response.data.timeStatement;
             const index = texts.indexOf(text);
             const updatedTexts = [...texts];
             updatedTexts[index].elapsedTime = newTime;
             updatedTexts[index].timerRunning = timerRunning;
+            updatedTexts[index].timeStatement = newTimeStatement;
             setTexts(updatedTexts);
 
         } catch(err) {

@@ -25,10 +25,17 @@ const AddForm = ({texts, setTexts}) => {
             updatedTexts.push(response);
             setTexts(updatedTexts);
             alert("Added new text.");
+            event.target.reset();
+            setInputs(values => ({
+                title: "",
+                genre: "",
+                wordCount: ""
+            }));
 
         } catch(err) {
             console.error(err);
         }
+
 
     }
 

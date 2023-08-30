@@ -5,6 +5,7 @@ import DeleteText from '../Buttons/DeleteText';
 import DoneButton from "../Buttons/DoneButton";
 import NotDoneButton from "../Buttons/NotDoneButton";
 import TimerButton from "../Buttons/TimerButton";
+import * as util from './Utility'
 
 const TextGrid = ({texts, setTexts}) => {
     return (
@@ -14,7 +15,7 @@ const TextGrid = ({texts, setTexts}) => {
                     texts?.map((text) => {
                         if (text.complete) {
                             return (
-                                <Card key={text.textId} bg="light">
+                                <Card key={text.textId} style={{ width: '15rem' }}>
                                     <Card.Img className={"card-image-closed"} variant="top"
                                               src={"https://game-icons.net/icons/000000/ffffff/1x1/willdabeast/black-book.png"}/>
                                     <Card.Body className={'card-body'}>
@@ -22,13 +23,16 @@ const TextGrid = ({texts, setTexts}) => {
                                         <Card.Text>
                                         </Card.Text>
                                         <div className="text-genre">
-                                            Genre: {text.genre}
+                                            Genre: {util.convertGenre(text.genre)}
                                         </div>
                                         <div className={"text-words"}>
                                             Words: {text.wordCount} words
                                         </div>
                                         <div className={"text-elapsed"}>
-                                            Time read: {text.elapsedTime}
+                                            Time read: {text.timeStatement}
+                                        </div>
+                                        <div className={"text-speed"}>
+                                            Reading speed: {util.calcReadingSpeed(text.wordCount, text.elapsedTime)} words/min
                                         </div>
                                         <NotDoneButton text={text} texts={texts} setTexts={setTexts}>
 
@@ -42,7 +46,7 @@ const TextGrid = ({texts, setTexts}) => {
 
                         } else {
                             return (
-                                <Card key={text.textId}>
+                                <Card key={text.textId} style={{ width: '18rem' }}>
                                     <Card.Img className={"card-image-open"}
                                               src={"https://openclipart.org/image/2400px/svg_to_png/191918/activity.png"}/>
                                     <Card.Body>
@@ -50,13 +54,13 @@ const TextGrid = ({texts, setTexts}) => {
                                         <Card.Text>
                                         </Card.Text>
                                         <div className="text-genre">
-                                            Genre: {text.genre}
+                                            Genre: {util.convertGenre(text.genre)}
                                         </div>
                                         <div className={"text-words"}>
                                             Words: {text.wordCount} words
                                         </div>
                                         <div className={"text-elapsed"}>
-                                            Time read: {text.elapsedTime}
+                                            Time read: {text.timeStatement}
                                         </div>
                                         <DoneButton text={text} texts={texts} setTexts={setTexts}></DoneButton>
                                         <TimerButton text={text} texts={texts} setTexts={setTexts}></TimerButton>
