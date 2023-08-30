@@ -62,8 +62,9 @@ const AddForm = ({texts, setTexts}) => {
                 <option value="SELF_HELP">Self-help book</option>
                 <option value="NF_OTHER">Any other non-fiction material</option>
             </Form.Select>
+            <Button className={"back-button"} variant="outline-secondary" href="home">Back</Button>
             <Button className={"submit-button"} type="submit">Submit</Button>
-            <Button className={"back-button"} href="home">Back</Button>
+
         </Form>
     )
 }

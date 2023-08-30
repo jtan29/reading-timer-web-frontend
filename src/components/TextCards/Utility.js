@@ -16,26 +16,32 @@ export function convertGenre(string) {
             return "Short story";
         }
         case ("OTHER"): {
-            return "Any other fictional material";
+            return "Other fictional material";
         }
         case ("ARTICLE"): {
             return "Non-fiction article";
         }
         case ("TEXTBOOK"): {
-            return "Textbook or other educational book";
+            return "Textbook/educational book";
         }
         case ("MEMOIR"): {
-            return "Memoir, biography, or autobiography";
+            return "Biographical book";
         }
         case ("SELF_HELP"): {
             return "Self-help book";
         }
+        case ("NF_OTHER"): {
+            return "Other non-fictional material"
+        }
         default:
-            return "Any other fictional material";
+            return "Other fictional material";
     }
 }
 
 export function calcReadingSpeed(wordCount, elapsedTime) {
+    if (elapsedTime === 0) {
+        return wordCount;
+    }
     const elapsedMinutes = elapsedTime / 60;
     return Math.round(wordCount / elapsedMinutes);
 }
