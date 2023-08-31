@@ -4,14 +4,19 @@ import React, {useState} from 'react';
 import {Form} from "react-bootstrap";
 import './AddForm.css'
 
+// The form to create new Texts
 const AddForm = ({texts, setTexts}) => {
     const [inputs, setInputs] = useState({});
+
+    // EFFECTS: stores the value of each field in the form when it is changed
     const handleChange = (event) => {
         const name = event.target.name;
         const value = event.target.value;
         setInputs(values => ({...values, [name]: value}))
     }
 
+    // EFFECTS: when submitted, sends a request to the backend to add a new Text with entered title, genre, and
+    // wordcount and updates the local representation of the Texts
     const handleSubmit = async (event) => {
         event.preventDefault();
         console.log(inputs);
@@ -32,13 +37,12 @@ const AddForm = ({texts, setTexts}) => {
                 wordCount: ""
             }));
 
-        } catch(err) {
+        } catch (err) {
             console.error(err);
         }
 
 
     }
-
     return (
         <Form onSubmit={handleSubmit}>
             <Form.Label>Enter title:</Form.Label>
@@ -64,7 +68,6 @@ const AddForm = ({texts, setTexts}) => {
             </Form.Select>
             <Button className={"back-button"} variant="outline-secondary" href="home">Back</Button>
             <Button className={"submit-button"} type="submit">Submit</Button>
-
         </Form>
     )
 }

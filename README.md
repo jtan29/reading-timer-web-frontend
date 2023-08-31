@@ -1,70 +1,46 @@
-# Getting Started with Create React App
+# Reading Timer Web (Frontend)
+A web application version of my Reading Timer project, originally written
+entirely in Java with a visual GUI using the Java Swing library. In this project
+the backend is still written in Java, utilizing the Spring framework to create a Rest API for
+this frontend, which written using Javascript, HTML, and CSS, utilizing the React and React Bootstrap libraries.
+
+
+## Original Description:
+
+### Reading Time Tracker
+
+**Features:**
+- Store a text's name, associated genre, and
+  word count (provided by the user)
+- Track multiple texts at the same time
+- In-app timer
+- Calculation of *estimated* reading speed using logged time
+- ~~Calculation of *estimated* reading time for given word count and genre, using
+  the calculated reading speed from other texts~~ (not implemented in this version yet)
+- ~~Options to manually adjust logged time~~ (not implemented in this version yet)
+
+**Potential Users:**
+
+- People interested in improving reading speed
+- People interested in estimating time needed to complete
+  reading a given text
+- People interested in tracking how much time they spend reading
+
+**Why:**
+
+* Reading/writing is one of my hobbies, and something that I wish
+  I had when reading was a way to keep track of how long it took me to finish
+  a particular book or other text, and how this time frame could vary depending on the genre.
+  Additionally, I could see this being useful to estimate the time that should be alloted
+  to reading a specific text.
+
+
+
+
+## Citations
+
+* Form inputs based on https://www.w3schools.com/react/react_forms.asp
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

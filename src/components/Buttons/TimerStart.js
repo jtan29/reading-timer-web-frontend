@@ -3,12 +3,15 @@ import api from '../../api/axiosConfig';
 import './Buttons.css'
 import React from 'react';
 
+// The button that is responsible for starting the timer on a Text
 const TimerStart = ({text, texts, setTexts}) => {
     const textId = text.textId;
 
-    const timerStart = async () =>{
+    // EFFECTS: sends a request to the backend to start the Timer, and uses the response to update the timer's status,
+    // on the Text locally
+    const timerStart = async () => {
         try {
-            const response = await api.put("/".concat(textId.toString(),"/","start"));
+            const response = await api.put("/".concat(textId.toString(), "/", "start"));
             const newTime = response.data.elapsedTime;
             const timerRunning = response.data.timerRunning;
             const index = texts.indexOf(text);
@@ -17,7 +20,7 @@ const TimerStart = ({text, texts, setTexts}) => {
             updatedTexts[index].timerRunning = timerRunning;
             setTexts(updatedTexts);
 
-        } catch(err) {
+        } catch (err) {
             console.error(err);
         }
     }

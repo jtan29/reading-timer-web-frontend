@@ -1,3 +1,4 @@
+// EFFECTS: converts string value the representation of genres to a human-readable description of the genre
 export function convertGenre(string) {
     switch (string) {
         case ("GENERAL"): {
@@ -38,6 +39,7 @@ export function convertGenre(string) {
     }
 }
 
+// EFFECTS: calculates the average reading speed for the text
 export function calcReadingSpeed(wordCount, elapsedTime) {
     if (elapsedTime === 0) {
         return wordCount;

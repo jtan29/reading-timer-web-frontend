@@ -7,6 +7,7 @@ import TimerButton from "../Buttons/TimerButton";
 import * as util from './Utility'
 import {Col, Row} from "react-bootstrap";
 
+// The grid of cards displaying all Texts and their relevant information
 const TextGrid = ({texts, setTexts}) => {
     return (
         <div className="text-grid">

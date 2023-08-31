@@ -3,18 +3,21 @@ import api from '../../api/axiosConfig';
 import './Buttons.css'
 import React from 'react';
 
+// The button that changes a Text's status to not complete
 const NotDoneButton = ({text, texts, setTexts}) => {
     const textId = text.textId;
 
-    const markNotDone = async () =>{
+    // EFFECTS: sends a request to the backend to change the Text's status to not complete and updates the Text in the local
+    // representation
+    const markNotDone = async () => {
         try {
-            const response = await api.put("/".concat(textId.toString(),"/","incomplete"));
+            const response = await api.put("/".concat(textId.toString(), "/", "incomplete"));
             const index = texts.indexOf(text);
             const updatedTexts = [...texts];
             updatedTexts[index].complete = false;
             setTexts(updatedTexts);
 
-        } catch(err) {
+        } catch (err) {
             console.error(err);
         }
     }

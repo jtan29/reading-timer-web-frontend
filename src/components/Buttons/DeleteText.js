@@ -3,12 +3,13 @@ import api from '../../api/axiosConfig';
 import React from 'react';
 import './Buttons.css'
 
+// The button that deletes a Text
 const DeleteText = ({text, texts, setTexts}) => {
-    const textId = text.textId;
 
+    // EFFECTS: sends a request to the backend to remove the Text from the database and removes the local representation
     const deleteText = async () =>{
         try {
-            const response = await api.delete("/".concat(textId.toString(),"/","delete"));
+            const response = await api.delete("/".concat(text.textId.toString(),"/","delete"));
             const index = texts.indexOf(text);
             const updatedTexts = [...texts];
             updatedTexts.splice(index, 1);
